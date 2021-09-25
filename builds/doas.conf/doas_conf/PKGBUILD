@@ -1,0 +1,14 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=testpkg
+pkgver=1
+pkgrel=1
+pkgdesc="Install /etc/doas.conf"
+arch=(any)
+license=(GPL)
+source=(doas.conf)
+
+package() {
+  install -Dm0644 doas.conf "$pkgdir"/etc/doas.conf
+}
+sha256sums=('3fbcca9cd3247d236c7c4f6f32603612e971e376037dfeb49a89f36fe4c66148')
