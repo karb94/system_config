@@ -1,0 +1,17 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=pacman_conf-aur
+pkgver=1
+pkgrel=1
+pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
+arch=(any)
+license=(GPL)
+source=(aur.conf)
+install=pacman_conf.install
+depends=(aurutils)
+
+package() {
+  install -Dm0644 aur.conf \
+    "$pkgdir"/etc/pacman.d/aur.conf
+}
+sha256sums=('c2bdbc18cd874fb2df20606e0dc0ea75867feea8772355e5a6e76769b6b4d579')

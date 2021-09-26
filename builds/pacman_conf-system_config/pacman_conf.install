@@ -1,0 +1,5 @@
+post_install() {
+  INCLUDE_LINE='Include = /etc/pacman.d/*.conf'
+  grep -qF "$INCLUDE_LINE" /etc/pacman.conf ||
+    printf "\n\n$INCLUDE_LINE\n" >> /etc/pacman.conf
+}
