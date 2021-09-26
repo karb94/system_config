@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Remove cache of uninstalled packages
+Exec = /usr/bin/paccache -rvuk0
+When = PostTransaction
+Depends = pacman-contrib

@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Only keep cache from previous and current version
+Exec = /usr/bin/paccache -rvk2
+When = PostTransaction
+Depends = pacman-contrib
