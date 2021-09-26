@@ -7,6 +7,7 @@ pkgdesc="Install /etc/doas.conf"
 arch=(any)
 license=(GPL)
 source=(doas.conf)
+depends=(opendoas)
 
 package() {
   install -Dm0644 doas.conf "$pkgdir"/etc/doas.conf

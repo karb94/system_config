@@ -3,10 +3,11 @@
 pkgname=paccache_hooks
 pkgver=1
 pkgrel=1
-pkgdesc="Install /etc/doas.conf"
+pkgdesc="Install paccache hooks in /etc/pacman.d/hooks"
 arch=(any)
 license=(GPL)
 source=(remove_old_cache.hook remove_uninstalled_cache.hook)
+depends=(pacman-contrib)
 
 package() {
   install -Dm0644 remove_old_cache.hook \
