@@ -14,4 +14,4 @@ package() {
   install -Dm0644 aur.conf \
     "$pkgdir"/etc/pacman.d/aur.conf
 }
-sha256sums=('c2bdbc18cd874fb2df20606e0dc0ea75867feea8772355e5a6e76769b6b4d579')
+sha256sums=('332435269ed83926445d9b8fb9183cac020be951bb30057a680062ce16c0f2f9')
