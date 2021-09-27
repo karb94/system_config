@@ -2,6 +2,7 @@ post_install() {
   INCLUDE_LINE='Include = /etc/pacman.d/*.conf'
   grep -qF "$INCLUDE_LINE" /etc/pacman.conf ||
     cat << EOF >> /etc/pacman.conf
+  mkdir -p /var/cache/pacman/aur_pkg/
   repo-add /var/cache/pacman/aur_pkg/aur.db.tar.gz
 
 # Include additional configuration files
