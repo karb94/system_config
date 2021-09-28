@@ -13,6 +13,7 @@ depends=(aurutils)
 package() {
   install -Dm0644 aur.conf \
     "$pkgdir"/etc/pacman.d/aur.conf
+  mkdir -p "$pkgdir"/var/cache/pacman/aur_pkg
+  repo-add "$pkgdir"/var/cache/pacman/aur_pkg/aur.db.tar.gz
 }
-sha256sums=('332435269ed83926445d9b8fb9183cac020be951bb30057a680062ce16c0f2f9')
 sha256sums=('332435269ed83926445d9b8fb9183cac020be951bb30057a680062ce16c0f2f9')
