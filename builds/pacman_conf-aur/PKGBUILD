@@ -6,16 +6,17 @@ pkgrel=1
 pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
 arch=(any)
 license=(GPL)
-source=(aur.conf)
+source=(aur.conf aur.sh)
 install=pacman_conf.install
 depends=(aurutils)
 
 package() {
-  install -Dm0644 aur.conf \
-    "$pkgdir"/etc/pacman.d/aur.conf
+  install -Dm0644 aur.conf "$pkgdir"/etc/pacman.d/aur.conf
+  install -Dm0644 aur.sh "$pkgdir"/etc/profile.d/aur.sh
   mkdir -p "$pkgdir"/var/cache/pacman/aur_pkg
   repo-add "$pkgdir"/var/cache/pacman/aur_pkg/aur.db.tar.gz
   chgrp  "wheel" "$pkgdir"/var/cache/pacman/aur_pkg/*
   chmod 664 "$pkgdir"/var/cache/pacman/aur_pkg/*
 }
-sha256sums=('332435269ed83926445d9b8fb9183cac020be951bb30057a680062ce16c0f2f9')
+sha256sums=('332435269ed83926445d9b8fb9183cac020be951bb30057a680062ce16c0f2f9'
+            'b3aedf1be8ebaa2af8876e34a6fb4b233c130ea0fae3d2e1b3da76566873cbbc')
