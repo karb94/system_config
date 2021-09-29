@@ -6,6 +6,7 @@ post_install() {
 # Include additional configuration files
 $INCLUDE_LINE
 EOF
+  cp /etc/pacman.conf /etc/aurutils/pacman-aur.conf
 }
 
 post_remove() {
