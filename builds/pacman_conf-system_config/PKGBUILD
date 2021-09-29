@@ -13,4 +13,4 @@ package() {
   install -Dm0644 system_config.conf \
     "$pkgdir"/etc/pacman.d/system_config.conf
 }
-sha256sums=('01e17b00d82754a1ebee0fd8304f39cfa0eaa9a12e53260580fbcdeb192902c8')
+sha256sums=('5aab93165c814e57fa30b8a061b5d5c6cb8462953ec53591edf4611442835e42')
