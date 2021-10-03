@@ -15,6 +15,7 @@ package() {
   install -Dm0644 aur.sh "$pkgdir"/etc/profile.d/aur.sh
   mkdir -pm775 "$pkgdir"/var/cache/pacman/aur_pkg
   repo-add "$pkgdir"/var/cache/pacman/aur_pkg/aur.db.tar.gz
+  chgrp  "wheel" "$pkgdir"/var/cache/pacman/aur_pkg
   chgrp  "wheel" "$pkgdir"/var/cache/pacman/aur_pkg/*
   chmod 664 "$pkgdir"/var/cache/pacman/aur_pkg/*
 }

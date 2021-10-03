@@ -10,9 +10,19 @@ EOF
 }
 
 post_remove() {
-  ls -U /etc/pacman.d/*.conf >/dev/null 2>&1 ||
+  if ls -U /etc/pacman.d/*.conf >/dev/null 2>&1
+  then :
+  else
+    # Replace what was added by the package
     sed -i \
-      -e '\%Include = /etc/pacman.d/\*\.conf%d' \
-      -e '/# Include additional configuration files/d' \
-      /etc/pacman.conf
+      '/^$/ {
+        N
+        /# Include additional configuration files/ {
+          N
+          \%Include = /etc/pacman.d/\*\.conf%d
+        }
+      }' /etc/pacman.conf
+    # In case the text has been modified at least remove the include if found
+    sed -i '/\%Include = /etc/pacman.d/\*\.conf%d' /etc/pacman.conf
+  fi
 }
