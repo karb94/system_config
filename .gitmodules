@@ -1,3 +1,0 @@
-[submodule "builds/aurutils"]
-	path = builds/aurutils
-	url = https://aur.archlinux.org/aurutils.git
