@@ -1,12 +1,12 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=profiled
+pkgname=env_vars
 pkgver=1
 pkgrel=1
 pkgdesc="Set system-wide environmental variables in /etc/profile.d/"
 arch=(any)
 license=(GPL)
-source=(system_config.sh)
+source=(env_vars.sh)
 
 package() {
   install -Dm0644 system_config.sh "$pkgdir"/etc/profile.d/system_config.sh
