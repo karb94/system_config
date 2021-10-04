@@ -1,0 +1,21 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=base_config
+pkgver=1
+pkgrel=1
+pkgdesc="Configure arch linux system"
+arch=(any)
+license=(GPL)
+depends=(
+  doas_conf
+  paccache_hooks
+  pacman_conf-system_config
+  pacman_conf-ungoogled_chromium
+  aur-meta
+  env_vars
+)
+
+package() {
+  echo container package for all system config
+}
+sha256sum=(SKIP)
