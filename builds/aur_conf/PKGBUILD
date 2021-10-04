@@ -1,0 +1,34 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=aur-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
+arch=(any)
+license=(GPL)
+source=(aur.conf aur.sh aurutils-3.1.2-2-any.pkg.tar.zst)
+install=pacman_conf.install
+
+package() {
+  # Add pacman configuration file
+  # The file will be included in /etc/pacman.conf via the Include command
+  install -Dm0644 aur.conf "$pkgdir"/etc/pacman.d/aur.conf
+
+  # Add aurutils environment variables to /etc/profile.d/
+  install -Dm0644 aur.sh "$pkgdir"/etc/profile.d/aur.sh
+
+  # Copy the aurutils package to the local repo directory
+  # Give read/write permisions to the "wheel" group
+  install -Dm0664 --group="wheel"\
+    aurutils-3.1.2-2-any.pkg.tar.zst \
+    "$pkgdir"/var/cache/pacman/aur-pkg/aurutils-3.1.2-2-any.pkg.tar.zst
+
+  # Create database and add the aurutils package
+  repo-add \
+    "$pkgdir"/var/cache/pacman/aur_pkg/aur.db.tar.gz \
+    "$pkgdir"/var/cache/pacman/aur-pkg/aurutils-3.1.2-2-any.pkg.tar.zst
+
+  # Grant read/write access of the whole directory to the "wheel" group
+  chgrp -h "wheel" "$pkgdir"/var/cache/pacman/aur-pkg/*
+  chmod 664 "$pkgdir"/var/cache/pacman/aur-pkg/*
+}

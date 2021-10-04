@@ -1,0 +1,14 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=aur-meta
+pkgver=1
+pkgrel=1
+pkgdesc="Install AUR related packages"
+arch=(any)
+license=(GPL)
+install=pacman_conf.install
+depends=(aur_conf base-devel devtools aurutils)
+
+package() {
+  :
+}

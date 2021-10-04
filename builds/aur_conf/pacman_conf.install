@@ -1,4 +1,5 @@
 post_install() {
+  # Include any .conf file in /etc/pacman.d/
   INCLUDE_LINE='Include = /etc/pacman.d/*.conf'
   grep -qF "$INCLUDE_LINE" /etc/pacman.conf ||
     cat << EOF >> /etc/pacman.conf
@@ -6,7 +7,13 @@ post_install() {
 # Include additional configuration files
 $INCLUDE_LINE
 EOF
+
+  # aurutils uses an independent pacman.conf for its builds
+  # Use the current pacman.conf
   install -Dm0644 /etc/pacman.conf /etc/aurutils/pacman-aur.conf
+
+  # Syncronize the newly added database
+  pacman -Sy
 }
 
 post_remove() {
@@ -25,4 +32,6 @@ post_remove() {
     # In case the text has been modified at least remove the include if found
     sed -i '/\%Include = /etc/pacman.d/\*\.conf%d' /etc/pacman.conf
   fi
+
+  rm -rf /etc/aurutils
 }
