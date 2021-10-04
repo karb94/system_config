@@ -10,7 +10,7 @@ depends=(
   doas_conf
   paccache_hooks
   pacman_conf-system_config
-  pacman_conf-ungoogled_chromium
+  ungoogled-chromium-conf
   aur-meta
   env_vars
 )

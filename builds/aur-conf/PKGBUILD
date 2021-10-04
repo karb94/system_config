@@ -7,7 +7,7 @@ pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
 arch=(any)
 license=(GPL)
 source=(aur.conf aur.sh aurutils-3.1.2-2-any.pkg.tar.zst)
-install=pacman_conf.install
+install=pacman-conf.install
 
 package() {
   # Add pacman configuration file
