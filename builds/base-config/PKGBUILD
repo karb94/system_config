@@ -7,12 +7,12 @@ pkgdesc="Configure arch linux system"
 arch=(any)
 license=(GPL)
 depends=(
-  doas_conf
-  paccache_hooks
-  pacman_conf-system_config
-  ungoogled-chromium-conf
   aur-meta
-  env_vars
+  doas-conf
+  env-vars
+  paccache-hooks
+  system_config-conf
+  ungoogled-chromium-conf
 )
 
 package() {
