@@ -10,9 +10,11 @@ source=(remove_old_cache.hook remove_uninstalled_cache.hook)
 depends=(pacman-contrib)
 
 package() {
-  install -Dm0644 remove_old_cache.hook \
+  install -Dm0644 \
+    "$srcdir"/remove_old_cache.hook \
     "$pkgdir"/etc/pacman.d/hooks/remove_old_cache.hook
-  install -Dm0644 remove_uninstalled_cache.hook \
+    install -Dm0644 \
+    "$srcdir"/remove_uninstalled_cache.hook \
     "$pkgdir"/etc/pacman.d/hooks/remove_uninstalled_cache.hook
 }
 sha256sums=('2bd521d5522dba1b52da1e852b37772353a2244bb5bf22e4872a61a9087a064b'

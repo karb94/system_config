@@ -10,7 +10,8 @@ source=(system_config.conf)
 install=pacman-conf.install
 
 package() {
-  install -Dm0644 system_config.conf \
+  install -Dm0644 \
+    "$srcdir"/system_config.conf \
     "$pkgdir"/etc/pacman.d/system_config.conf
 }
 sha256sums=('95146ede4c79be4743a0e980cb571a6c207a5e7ac0074e63a5e39ddcb96df667')

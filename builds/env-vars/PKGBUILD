@@ -9,6 +9,8 @@ license=(GPL)
 source=(env_vars.sh)
 
 package() {
-  install -Dm0644 env_vars.sh "$pkgdir"/etc/profile.d/env_vars.sh
+  install -Dm0644 \
+    "$srcdir"/env_vars.sh \
+    "$pkgdir"/etc/profile.d/env_vars.sh
 }
 sha256sums=('797b2f8a13e8970b72bf4ce5dec1c18f16a7723cbf7e47e97a6200b7aa322fff')

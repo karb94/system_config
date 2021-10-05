@@ -10,6 +10,8 @@ source=(doas.conf)
 depends=(opendoas)
 
 package() {
-  install -Dm0644 doas.conf "$pkgdir"/etc/doas.conf
+  install -Dm0644 \
+    "$srcdir"/doas.conf \
+    "$pkgdir"/etc/doas.conf
 }
 sha256sums=('3fbcca9cd3247d236c7c4f6f32603612e971e376037dfeb49a89f36fe4c66148')

@@ -16,6 +16,8 @@ depends=(
 )
 
 package() {
-  install -Dm0644 startup.sh make/etc/X11/xinit/xinitrc.d/startup.sh
+  install -Dm0644 \
+    "$srcdir"/startup.sh \
+    "$pkgdir"/etc/X11/xinit/xinitrc.d/startup.sh
 }
 sha256sums=('3e1cf920139708b17712a9e2d675c96e0514752acab5dce5dd8d2b40c164e5fd')

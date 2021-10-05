@@ -10,7 +10,8 @@ source=(ungoogled-chromium.conf)
 install=pacman-conf.install
 
 package() {
-  install -Dm0644 ungoogled-chromium.conf \
+  install -Dm0644 \
+    "$srcdir"/ungoogled-chromium.conf \
     "$pkgdir"/etc/pacman.d/ungoogled-chromium.conf
 }
 sha256sums=('7fd0f0066eb367c999b837f6c2731f9e32831dbe117b3bdf76989d3443701016')
