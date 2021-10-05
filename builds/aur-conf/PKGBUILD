@@ -32,3 +32,6 @@ package() {
   chgrp -h "wheel" "$pkgdir"/var/cache/pacman/aur-pkg/*
   chmod 664 "$pkgdir"/var/cache/pacman/aur-pkg/*
 }
+sha256sums=('332435269ed83926445d9b8fb9183cac020be951bb30057a680062ce16c0f2f9'
+            '27f5efdce462ce35ab7b00ec33ce1a146dc62afca2124f3e13efc847be15ab9b'
+            '5caeb594fcbb3a9551331963f9b47608bde65232e5d84702804518b4118d0071')
