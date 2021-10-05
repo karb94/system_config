@@ -1,6 +1,6 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=doas_conf
+pkgname=doas-conf
 pkgver=1
 pkgrel=1
 pkgdesc="Install /etc/doas.conf"

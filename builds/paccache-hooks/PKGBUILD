@@ -1,6 +1,6 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=paccache_hooks
+pkgname=paccache-hooks
 pkgver=1
 pkgrel=1
 pkgdesc="Install paccache hooks in /etc/pacman.d/hooks"
