@@ -1,0 +1,18 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=neovim-meta
+pkgver=1
+pkgrel=1
+pkgdesc="Install Neovim related packages"
+arch=(any)
+license=(GPL)
+depends=(
+  neovim
+  python-pynvim
+  xsel
+  neovim-remote
+)
+
+package() {
+  :
+}

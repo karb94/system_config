@@ -1,0 +1,27 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=utils-meta
+pkgver=1
+pkgrel=1
+pkgdesc="Install system utilities"
+arch=(any)
+license=(GPL)
+depends=(
+  awk
+  curl
+  file
+  findutils
+  git
+  grep
+  gzip
+  jq
+  man-db
+  man-pages
+  patch
+  sed
+  which
+)
+
+package() {
+  :
+}

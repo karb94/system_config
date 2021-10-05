@@ -13,6 +13,11 @@ depends=(
   paccache-hooks
   system_config-conf
   ungoogled-chromium-conf
+  neovim-meta
+  xorg-meta
+  utils-meta
+  build-meta
+  pipewire
 )
 
 package() {

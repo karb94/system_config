@@ -1,0 +1,21 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=xorg-meta
+pkgver=1
+pkgrel=1
+pkgdesc="Install Xorg related packages"
+arch=(any)
+license=(GPL)
+source=(startup.sh)
+depends=(
+  bspwm
+  xorg-server
+  xorg-xev
+  xorg-xsetroot
+  picom
+)
+
+package() {
+  install -Dm0644 startup.sh make/etc/X11/xinit/xinitrc.d/startup.sh
+}
+sha256sums=('3e1cf920139708b17712a9e2d675c96e0514752acab5dce5dd8d2b40c164e5fd')
