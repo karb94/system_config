@@ -7,7 +7,7 @@ pkgdesc="Install AUR related packages"
 arch=(any)
 license=(GPL)
 install=pacman_conf.install
-depends=(aur-conf base-devel devtools aurutils)
+depends=(aur-conf base-devel devtools)
 
 package() {
   :
