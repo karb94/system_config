@@ -25,7 +25,7 @@ package() {
 
   # Create database and add the aurutils package
   repo-add \
-    "$pkgdir"/var/cache/pacman/aur_pkg/aur.db.tar.gz \
+    "$pkgdir"/var/cache/pacman/aur-pkg/aur.db.tar.gz \
     "$pkgdir"/var/cache/pacman/aur-pkg/aurutils-3.1.2-2-any.pkg.tar.zst
 
   # Grant read/write access of the whole directory to the "wheel" group
