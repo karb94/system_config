@@ -8,16 +8,17 @@ arch=(any)
 license=(GPL)
 depends=(
   aur-meta
+  build-meta
   doas-conf
   env-vars
+  neovim-meta
+  networkmanager-meta
   paccache-hooks
+  pipewire
   system_config-conf
   ungoogled-chromium-conf
-  neovim-meta
-  xorg-meta
   utils-meta
-  build-meta
-  pipewire
+  xorg-meta
 )
 
 package() {

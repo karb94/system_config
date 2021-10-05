@@ -9,10 +9,11 @@ license=(GPL)
 source=(startup.sh)
 depends=(
   bspwm
+  picom
   xorg-server
   xorg-xev
+  xorg-xinit
   xorg-xsetroot
-  picom
 )
 
 package() {
