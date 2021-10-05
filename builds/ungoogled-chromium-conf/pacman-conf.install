@@ -1,0 +1,17 @@
+post_install() {
+  INCLUDE_LINE='Include = /etc/pacman.d/*.conf'
+  grep -qF "$INCLUDE_LINE" /etc/pacman.conf ||
+    cat << EOF >> /etc/pacman.conf
+
+# Include additional configuration files
+$INCLUDE_LINE
+EOF
+}
+
+post_remove() {
+  ls -U /etc/pacman.d/*.conf >/dev/null 2>&1 ||
+    sed -i \
+      -e '\%Include = /etc/pacman.d/\*\.conf%d' \
+      -e '/# Include additional configuration files/d' \
+      /etc/pacman.conf
+}
