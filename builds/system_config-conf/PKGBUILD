@@ -1,6 +1,6 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=pacman_conf-system_config
+pkgname=system_config-conf
 pkgver=1
 pkgrel=1
 pkgdesc="Install pacman configuration (pacman.conf) for system_config"
