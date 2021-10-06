@@ -4,4 +4,7 @@ post_install() {
   
   # Generate locale
   locale-gen
+
+  # create fstab
+  genfstab -L / >> /mnt/etc/fstab
 }
