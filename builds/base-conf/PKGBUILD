@@ -22,10 +22,5 @@ depends=(
 )
 
 package() {
-  # List of locales to be generated
-  install -Dm0644 "$srcdir"/locale.gen "$pkgdir"/etc/locale.gen
-
-  # Set default locale
-  install -Dm0644 "$srcdir"/locale.conf "$pkgdir"/etc/locale.conf
+  :
 }
-sha256sum=(SKIP)
