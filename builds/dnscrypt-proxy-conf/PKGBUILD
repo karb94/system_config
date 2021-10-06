@@ -8,6 +8,7 @@ arch=(any)
 license=(GPL)
 source=(dnscrypt-proxy.toml resolv.conf)
 depends=(dnscrypt-proxy)
+optdepends=(networkmanager)
 
 package() {
   # DNSCrypt-proxy configuration
