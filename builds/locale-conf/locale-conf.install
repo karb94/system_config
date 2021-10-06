@@ -1,3 +1,7 @@
+pre_install() {
+  rm /etc/locale.gen
+}
+
 post_install() {
   # Set a time zone
   ln -sf /usr/share/zoneinfo/GB /etc/localtime
