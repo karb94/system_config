@@ -10,6 +10,9 @@ license=(GPL)
 source=(locale.gen locale.conf)
 
 package() {
+  # List locales to generate
+  install -Dm0644 "$srcdir"/locale.gen "$pkgdir"/usr/lib/locale-conf/locale.gen
+
   # Set default locale
   install -Dm0644 "$srcdir"/locale.conf "$pkgdir"/etc/locale.conf
 }
