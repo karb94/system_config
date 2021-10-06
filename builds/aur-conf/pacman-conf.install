@@ -11,11 +11,6 @@ EOF
   # aurutils uses an independent pacman.conf for its builds
   # Use the current pacman.conf
   install -Dm0644 /etc/pacman.conf /etc/aurutils/pacman-aur.conf
-
-  # Syncronize the newly added database
-  pacman -Sy
-  # Syncronize the newly added database
-  pacman -S base-devel
 }
 
 post_remove() {
