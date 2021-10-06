@@ -1,0 +1,24 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=network-meta
+pkgver=1
+pkgrel=1
+pkgdesc="Configure network"
+arch=(any)
+license=(GPL)
+source=(hostname hosts)
+install=network-meta.install
+depends=(
+  networkmanager-meta
+  dnscrypt-proxy-conf
+)
+
+package() {
+  # Set your hostname
+  install -Dm0644 "$srcdir"/hostname "$pkgdir"/etc/hostname
+
+  # Install hosts in /usr/lib/ as the package "filename" also creates the file
+  install -Dm0644 "$srcdir"/hosts "$pkgdir"/usr/lib/network-meta/hosts
+}
+sha256sums=('af8cbccdc2cd880b3457d46e0be4f2b74b37a30ac1de9f644e641ca9a964f590'
+            'f8898f9b99703831422748310f437d4383de8600e299ec3406555f4e0d2a3c42')

@@ -1,0 +1,19 @@
+post_install() {
+  cp -f \
+    /usr/lib/dnscrypt-proxy-conf/dnscrypt-proxy.toml \
+    /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+
+  # Replace resolv.conf (responsible for the DNS addresses)
+  # Replace resolv.conf (responsible for the DNS addresses)
+  cp -f \
+    /usr/lib/dnscrypt-proxy-conf/resolv.conf \
+    /etc/resolv.conf
+
+  # enable DNSCrypt-proxy daemon service
+  systemctl enable --now dnscrypt-proxy.service
+}
+
+post_remove() {
+  # disable DNSCrypt-proxy daemon service
+  systemctl disable --now dnscrypt-proxy.service
+}

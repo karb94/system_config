@@ -1,0 +1,24 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=dnscrypt-proxy-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Install and configure DNSCrypt-proxy"
+arch=(any)
+license=(GPL)
+source=(dnscrypt-proxy.toml resolv.conf)
+depends=(dnscrypt-proxy)
+
+package() {
+  # DNSCrypt-proxy configuration
+  install -Dm0644 \
+    "$srcdir"/dnscrypt-proxy.toml \
+    "$pkgdir"/usr/lib/dnscrypt-proxy-conf/dnscrypt-proxy.toml
+
+  # resolv.conf file for DNS configuration
+  install -Dm0644 \
+    "$srcdir"/resolv.conf \
+    "$pkgdir"/usr/lib/dnscrypt-proxy-conf/resolv.conf
+}
+sha256sums=('47d7153693a479e8779d297a6fa1849ac6d0ad62dab5c7c0cbb1387814511c5f'
+            'ca0b01bb033eb48a41bf9fb99032699dae2437c74055c5562356adecf6ad5ec3')
