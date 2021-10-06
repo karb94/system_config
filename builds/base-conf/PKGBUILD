@@ -19,6 +19,7 @@ depends=(
   ungoogled-chromium-conf
   utils-meta
   xorg-meta
+  locale-conf
 )
 
 package() {

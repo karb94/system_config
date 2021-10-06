@@ -1,6 +1,6 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=local-conf
+pkgname=locale-conf
 pkgver=1
 pkgrel=1
 pkgdesc="Configure arch linux system"
