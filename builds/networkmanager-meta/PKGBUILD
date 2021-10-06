@@ -6,6 +6,7 @@ pkgrel=1
 pkgdesc="Install NetworkManager related packages"
 arch=(any)
 license=(GPL)
+source=(dns.conf)
 install=networkmanager.install
 depends=(
   networkmanager
@@ -14,5 +15,8 @@ depends=(
 )
 
 package() {
-  :
+  install -Dm0644 \
+    "$srcdir"/dns.conf \
+    "$pkgdir"/etc/NetworkManager/conf.d/dns.conf
 }
+sha256sums=('e157ff3707ff897f4c79ff05f707350bf573624805fc739d3eda758cca94b77d')
