@@ -1,13 +1,11 @@
-pre_install() {
-  rm /etc/locale.gen
-}
-
 post_install() {
   # Set a time zone
   ln -sf /usr/share/zoneinfo/GB /etc/localtime
   # Update Hardware Clock from the System Clock
   hwclock --systohc
   
+  # Copy locale.gen in the right directory
+  cp -f /usr/lib/locale-conf/locale.gen /etc/locale.gen
   # Generate locale
   locale-gen
 }
