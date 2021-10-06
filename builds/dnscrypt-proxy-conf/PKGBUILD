@@ -6,6 +6,7 @@ pkgrel=1
 pkgdesc="Install and configure DNSCrypt-proxy"
 arch=(any)
 license=(GPL)
+install=dnscrypt-proxy-conf.install
 source=(dnscrypt-proxy.toml resolv.conf)
 depends=(dnscrypt-proxy)
 
