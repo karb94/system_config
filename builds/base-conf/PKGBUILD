@@ -20,6 +20,7 @@ depends=(
   utils-meta
   xorg-meta
   locale-conf
+  grub-conf
 )
 
 package() {
