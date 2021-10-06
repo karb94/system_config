@@ -1,0 +1,20 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=local-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Configure arch linux system"
+arch=(any)
+install=locale-conf.install
+license=(GPL)
+source=(locale.gen locale.conf)
+
+package() {
+  # List of locales to be generated
+  install -Dm0644 "$srcdir"/locale.gen "$pkgdir"/etc/locale.gen
+
+  # Set default locale
+  install -Dm0644 "$srcdir"/locale.conf "$pkgdir"/etc/locale.conf
+}
+sha256sums=('d127a838cd141b9ae1be821c114399f3a99996890a65e0468a68500d894944c1'
+            '337ad308b494e9d3261fc6b75fdd450917a2b14930f675824acf358a2dadc815')

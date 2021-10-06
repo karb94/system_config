@@ -1,0 +1,9 @@
+post_install() {
+  # Set a time zone
+  ln -sf /usr/share/zoneinfo/GB /etc/localtime
+  # Update Hardware Clock from the System Clock
+  hwclock --systohc
+  
+  # Generate locale
+  locale-gen
+}

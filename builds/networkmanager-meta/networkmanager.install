@@ -1,0 +1,9 @@
+post_install() {
+  # enable NetworkManager daemon service
+  systemctl enable --now NetworkManager.service
+}
+
+post_remove() {
+  # disable NetworkManager daemon service
+  systemctl disable --now NetworkManager.service
+}

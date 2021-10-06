@@ -1,6 +1,6 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=base-config
+pkgname=base-conf
 pkgver=1
 pkgrel=1
 pkgdesc="Configure arch linux system"
@@ -22,6 +22,10 @@ depends=(
 )
 
 package() {
-  echo container package for all system config
+  # List of locales to be generated
+  install -Dm0644 "$srcdir"/locale.gen "$pkgdir"/etc/locale.gen
+
+  # Set default locale
+  install -Dm0644 "$srcdir"/locale.conf "$pkgdir"/etc/locale.conf
 }
 sha256sum=(SKIP)
