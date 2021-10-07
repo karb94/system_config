@@ -20,8 +20,10 @@ depends=(
   utils-meta
   xorg-meta
   locale-conf
-  grub
+  grub-conf
   fstab-conf
+  linux-zen
+  linux-firmware 
 )
 
 package() {
