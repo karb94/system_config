@@ -21,6 +21,7 @@ depends=(
   xorg-meta
   locale-conf
   grub-conf
+  fstab-conf
 )
 
 package() {
