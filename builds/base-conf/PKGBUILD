@@ -20,7 +20,7 @@ depends=(
   utils-meta
   xorg-meta
   locale-conf
-  grub-conf
+  grub
   fstab-conf
 )
 
