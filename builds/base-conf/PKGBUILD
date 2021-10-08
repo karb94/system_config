@@ -20,7 +20,6 @@ depends=(
   utils-meta
   xorg-meta
   locale-conf
-  grub-conf
   fstab-conf
   linux-zen
   linux-firmware 
