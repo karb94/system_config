@@ -6,10 +6,13 @@ pkgrel=1
 pkgdesc="Install Xorg related packages"
 arch=(any)
 license=(GPL)
-source=(sys.startxrc)
+source=(xinitrc)
 depends=(
   bspwm
+  hsetroot
   picom
+  sxhkd
+  unclutter
   xorg-server
   xorg-xev
   xorg-xinit
@@ -18,7 +21,7 @@ depends=(
 
 package() {
   install -Dm0644 \
-    "$srcdir"/sys.startxrc \
-    "$pkgdir"/usr/lib/sys.startxrc
+    "$srcdir"/xinitrc \
+    "$pkgdir"/usr/lib/xorg-meta/xinitrc
 }
-sha256sums=('ed8ac86eec57e55855b0c83961ed9a197ab8d24e897f6f6107ddd6217e861a14')
+sha256sums=('fbd14558a200d024757d9bbeef7890f0ab6476af4b463216467aa266149876dc')
