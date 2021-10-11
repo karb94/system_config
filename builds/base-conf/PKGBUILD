@@ -19,7 +19,7 @@ depends=(
   paccache-hooks
   pipewire
   system_config-conf
-  systemf-boot-conf
+  systemd-boot-conf
   ungoogled-chromium-conf
   utils-meta
   xorg-meta
