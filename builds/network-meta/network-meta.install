@@ -1,4 +1,4 @@
 post_install() {
   # Install hosts file here because the package "filesystem" creates the file
-  cp -f /usr/lib/network-meta/hosts /etc/hosts
+  cp -vf /usr/lib/network-meta/hosts /etc/hosts
 }

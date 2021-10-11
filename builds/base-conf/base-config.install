@@ -1,6 +1,6 @@
 post_install() {
   # Update Hardware Clock from the System Clock
-  hwclock --systohc
+  hwclock -v --systohc
   
   # Generate locale
   locale-gen

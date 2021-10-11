@@ -9,6 +9,7 @@ EOF
 }
 
 post_remove() {
+  echo "Removing \"Include = /etc/pacman.d/\*conf\" from /etc/pacman.conf"
   ls -U /etc/pacman.d/*.conf >/dev/null 2>&1 ||
     sed -i \
       -e '\%Include = /etc/pacman.d/\*\.conf%d' \

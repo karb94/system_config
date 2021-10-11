@@ -5,7 +5,7 @@ post_install() {
   hwclock --systohc
   
   # Copy locale.gen in the right directory
-  cp -f /usr/lib/locale-conf/locale.gen /etc/locale.gen
+  cp -vf /usr/lib/locale-conf/locale.gen /etc/locale.gen
   # Generate locale
   locale-gen
 }

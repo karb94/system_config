@@ -10,10 +10,11 @@ EOF
 
   # aurutils uses an independent pacman.conf for its builds
   # Use the current pacman.conf
-  install -Dm0644 /etc/pacman.conf /etc/aurutils/pacman-aur.conf
+  install -vDm0644 /etc/pacman.conf /etc/aurutils/pacman-aur.conf
 }
 
 post_remove() {
+  echo "Removing \"Include = /etc/pacman.d/\*conf\" from /etc/pacman.conf"
   if ls -U /etc/pacman.d/*.conf >/dev/null 2>&1
   then :
   else
@@ -30,5 +31,5 @@ post_remove() {
     sed -i '/\%Include = /etc/pacman.d/\*\.conf%d' /etc/pacman.conf
   fi
 
-  rm -rf /etc/aurutils
+  rm -vrf /etc/aurutils
 }

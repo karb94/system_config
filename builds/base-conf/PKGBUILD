@@ -11,18 +11,19 @@ depends=(
   build-meta
   doas-conf
   env-vars
+  fstab-conf
+  linux-firmware 
+  linux-zen
+  locale-conf
   neovim-meta
   network-meta
   paccache-hooks
   pipewire
   system_config-conf
+  systemf-boot-conf
   ungoogled-chromium-conf
   utils-meta
   xorg-meta
-  locale-conf
-  fstab-conf
-  linux-zen
-  linux-firmware 
 )
 
 package() {
