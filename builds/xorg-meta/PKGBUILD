@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc="Install Xorg related packages"
 arch=(any)
 license=(GPL)
-source=(startup.sh)
+source=(sys.startxrc)
 depends=(
   bspwm
   picom
@@ -21,3 +21,4 @@ package() {
     "$srcdir"/sys.startxrc \
     "$pkgdir"/usr/lib/sys.startxrc
 }
+sha256sums=('ed8ac86eec57e55855b0c83961ed9a197ab8d24e897f6f6107ddd6217e861a14')
