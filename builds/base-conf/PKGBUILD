@@ -20,7 +20,6 @@ depends=(
   pipewire
   system_config-conf
   ungoogled-chromium-conf
-  useradd-skel
   utils-meta
   xorg-meta
 )
