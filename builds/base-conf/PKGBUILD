@@ -18,6 +18,7 @@ depends=(
   network-meta
   paccache-hooks
   pipewire
+  shell-meta
   system_config-conf
   ungoogled-chromium-conf
   utils-meta
