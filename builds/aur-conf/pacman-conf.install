@@ -7,10 +7,6 @@ post_install() {
 # Include additional configuration files
 $INCLUDE_LINE
 EOF
-
-  # aurutils uses an independent pacman.conf for its builds
-  # Use the current pacman.conf
-  install -vDm0644 /etc/pacman.conf /etc/aurutils/pacman-aur.conf
 }
 
 post_remove() {

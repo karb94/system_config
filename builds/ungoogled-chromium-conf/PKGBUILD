@@ -8,6 +8,7 @@ arch=(any)
 license=(GPL)
 source=(ungoogled-chromium.conf)
 install=pacman-conf.install
+depends=(ungoogled-chromium)
 
 package() {
   install -Dm0644 \

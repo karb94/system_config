@@ -6,32 +6,38 @@ pkgrel=1
 pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
 arch=(any)
 license=(GPL)
-source=(aur.conf aur.sh aurutils-3.1.2-2-any.pkg.tar.zst)
+source=(aur.conf aur.sh pacman-aur.conf aurutils-3.1.2-2-any.pkg.tar.zst)
 install=pacman-conf.install
 
 package() {
   # Add pacman configuration file
   # The file will be included in /etc/pacman.conf via the Include command
-  install -Dm0644 "$srcdir"/aur.conf "$pkgdir"/etc/pacman.d/aur.conf
+  install -Dm0644 "$srcdir/aur.conf" "$pkgdir/etc/pacman.d/aur.conf"
 
   # Add aurutils environment variables to /etc/profile.d/
-    install -Dm0644 "$srcdir"/aur.sh "$pkgdir"/etc/profile.d/aur.sh
+  install -Dm0644 "$srcdir/aur.sh" "$pkgdir/etc/profile.d/aur.sh"
 
   # Copy the aurutils package to the local repo directory
   # Give read/write permisions to the "wheel" group
   install -Dm0664 --group="wheel" \
-    "$srcdir"/aurutils-3.1.2-2-any.pkg.tar.zst \
-    "$pkgdir"/var/cache/pacman/aur-pkg/aurutils-3.1.2-2-any.pkg.tar.zst
+    "$srcdir/aurutils-3.1.2-2-any.pkg.tar.zst" \
+    "$pkgdir/var/cache/pacman/aur-pkg/aurutils-3.1.2-2-any.pkg.tar.zst"
 
   # Create database and add the aurutils package
   repo-add \
-    "$pkgdir"/var/cache/pacman/aur-pkg/aur.db.tar.gz \
-    "$pkgdir"/var/cache/pacman/aur-pkg/aurutils-3.1.2-2-any.pkg.tar.zst
+    "$pkgdir/var/cache/pacman/aur-pkg/aur.db.tar.gz" \
+    "$pkgdir/var/cache/pacman/aur-pkg/aurutils-3.1.2-2-any.pkg.tar.zst"
 
   # Grant read/write access of the whole directory to the "wheel" group
-  chgrp -h "wheel" "$pkgdir"/var/cache/pacman/aur-pkg/*
-  chmod 664 "$pkgdir"/var/cache/pacman/aur-pkg/*
+  chgrp -Rh "wheel" "$pkgdir/var/cache/pacman/aur-pkg"
+  chmod -R 664 "$pkgdir/var/cache/pacman/aur-pkg"
+
+  # aurutils uses an independent pacman.conf for its builds
+  install -vDm0644 \
+    "$srcdir/pacman-aur.conf" \
+    "$pkgdir/etc/aurutils/pacman-aur.conf"
 }
 sha256sums=('ea58015e037939353c6ae6806863d362707198fbcab5a2eb7e3b26584352f13f'
             '27f5efdce462ce35ab7b00ec33ce1a146dc62afca2124f3e13efc847be15ab9b'
+            'd5c13dec974a9fe803c2cf62101d1fac92b859d4b7f06c15ea8a444a9230ecb0'
             '5caeb594fcbb3a9551331963f9b47608bde65232e5d84702804518b4118d0071')
