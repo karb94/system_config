@@ -8,6 +8,7 @@ arch=(any)
 license=(GPL)
 depends=(
   aur-meta
+  base-devel
   build-meta
   doas-conf
   env-vars
@@ -19,11 +20,11 @@ depends=(
   paccache-hooks
   pipewire
   shell-meta
+  sudo-conf
   system_config-conf
   ungoogled-chromium-conf
   utils-meta
   xorg-meta
-  base-devel
 )
 
 package() {
