@@ -23,6 +23,7 @@ depends=(
   ungoogled-chromium-conf
   utils-meta
   xorg-meta
+  base-devel
 )
 
 package() {
