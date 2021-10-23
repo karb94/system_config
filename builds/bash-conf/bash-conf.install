@@ -1,0 +1,3 @@
+post_install() {
+  cp -vf /usr/lib/bash-conf/bashrc /etc/bash.bashrc
+}

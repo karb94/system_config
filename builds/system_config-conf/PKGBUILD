@@ -1,13 +1,12 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=system_config-conf
+pkgname=system_config-repo-conf
 pkgver=1
 pkgrel=1
 pkgdesc="Install pacman configuration (pacman.conf) for system_config"
 arch=(any)
 license=(GPL)
 source=(system_config.conf)
-install=pacman-conf.install
 
 package() {
   install -Dm0644 \

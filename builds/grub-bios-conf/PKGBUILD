@@ -1,0 +1,18 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=grub-bios-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Configure GRUB 2 for BIOS systems"
+arch=(any)
+license=(GPL)
+install=grub-conf.install
+depends=(
+  grub
+  fstab-conf
+  linux-zen
+)
+
+package() {
+  :
+}

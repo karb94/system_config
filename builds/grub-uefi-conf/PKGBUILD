@@ -1,0 +1,19 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=grub-uefi-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Configure GRUB 2 for UEFI systems"
+arch=(any)
+license=(GPL)
+install=grub-conf.install
+depends=(
+  grub
+  fstab-conf
+  linux-zen
+  efibootmgr
+)
+
+package() {
+  :
+}

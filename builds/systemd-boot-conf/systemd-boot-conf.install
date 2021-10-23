@@ -1,0 +1,8 @@
+post_install() {
+  # Install systemd-boot
+  bootctl install
+
+  # Install config files
+  cp -vf /usr/lib/systemd-boot-conf/loader.conf /boot/loader/loader.conf
+  cp -vf /usr/lib/systemd-boot-conf/arch.conf /boot/loader/entries/arch.conf
+}

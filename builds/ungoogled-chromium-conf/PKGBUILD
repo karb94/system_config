@@ -7,7 +7,6 @@ pkgdesc="Install pacman configuration (pacman.conf) for ungoogled chromium"
 arch=(any)
 license=(GPL)
 source=(ungoogled-chromium.conf)
-install=pacman-conf.install
 depends=(ungoogled-chromium)
 
 package() {

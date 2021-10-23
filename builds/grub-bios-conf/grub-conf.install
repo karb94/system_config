@@ -1,0 +1,11 @@
+post_install() {
+  # Determine device where the root installation is installed
+  partition=$(df --output=source / | tail -1)
+  device=${partition%[[:digit:]]}
+
+  # Install GRUB
+  grub-install --target=i386-pc "${device}"
+
+  # Generate GRUB configuration
+  grub-mkconfig -o /boot/grub/grub.cfg
+}

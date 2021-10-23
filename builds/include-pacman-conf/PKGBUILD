@@ -1,0 +1,13 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=include-pacman-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Install pacman configuration to include config files in /etc/pacman.d/"
+arch=(any)
+license=(GPL)
+install=include-pacman-conf.install
+
+package() {
+  :
+}

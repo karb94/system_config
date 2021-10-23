@@ -1,0 +1,16 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=bash-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Install Xorg related packages"
+arch=(any)
+license=(GPL)
+source=(bashrc)
+install=bash-conf.install
+depends=(bash)
+
+package() {
+  install -vDm0644 "$srcdir/bashrc" "$pkgdir/usr/lib/bash-conf/bashrc"
+}
+sha256sums=('79e35c3b283dd4f549553a561557a7568ee5c6279168a778232fb91b3014fbaa')

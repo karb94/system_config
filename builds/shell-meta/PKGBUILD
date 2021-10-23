@@ -1,0 +1,17 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=shell-meta
+pkgver=1
+pkgrel=1
+pkgdesc="Install shell related packages"
+arch=(any)
+license=(GPL)
+depends=(
+  bash
+  bash-conf
+  fzf
+)
+
+package() {
+  :
+}

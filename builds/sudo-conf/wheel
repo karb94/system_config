@@ -1,0 +1,6 @@
+[options]
+ParallelDownloads = 6
+
+[system_config]
+SigLevel = Optional TrustAll
+Server = https://karb94.github.io/$repo/$arch

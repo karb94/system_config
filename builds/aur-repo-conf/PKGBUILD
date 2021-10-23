@@ -1,6 +1,6 @@
 # Maintainer: Carles Rafols i Belles
 
-pkgname=aur-conf
+pkgname=aur-repo-conf
 pkgver=1
 pkgrel=1
 pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
@@ -8,6 +8,7 @@ arch=(any)
 license=(GPL)
 source=(aur.conf aur.sh pacman-aur.conf aurutils-3.1.2-2-any.pkg.tar.zst)
 install=pacman-conf.install
+depends=(include-pacman-conf)
 
 package() {
   # Add pacman configuration file
