@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
 arch=(any)
 license=(GPL)
-source=(aur.conf aur.sh pacman-aur.conf aurutils-3.1.2-2-any.pkg.tar.zst)
+source=(aur.conf aur.sh)
 install=pacman-conf.install
 depends=(include-pacman-conf)
 
@@ -38,7 +38,5 @@ package() {
     "$srcdir/pacman-aur.conf" \
     "$pkgdir/etc/aurutils/pacman-aur.conf"
 }
-sha256sums=('ea58015e037939353c6ae6806863d362707198fbcab5a2eb7e3b26584352f13f'
-            '27f5efdce462ce35ab7b00ec33ce1a146dc62afca2124f3e13efc847be15ab9b'
-            'd5c13dec974a9fe803c2cf62101d1fac92b859d4b7f06c15ea8a444a9230ecb0'
-            '5caeb594fcbb3a9551331963f9b47608bde65232e5d84702804518b4118d0071')
+sha256sums=('78b7c81385ec3802bf5247b2eeb6cbca9cf25133deb1f7e07000ba18e7b2dcdc'
+            '5420f6746c1d291ecdb383e5bc4c4c67321c3546cb455038d39d812416a87d50')
