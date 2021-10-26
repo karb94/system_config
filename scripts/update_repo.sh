@@ -1,5 +1,8 @@
 #! /bin/sh
 
+# exit when any command fails
+set -e
+
 script_path=$(dirname $0)
 
 rm -f "$script_path"/../x86_64/*

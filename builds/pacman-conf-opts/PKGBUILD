@@ -1,0 +1,18 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=pacman-conf-opts
+pkgver=1
+pkgrel=1
+pkgdesc="Pacman configuration (pacman.conf)"
+arch=(any)
+license=(GPL)
+source=(options.conf)
+depends=(include-pacman-conf)
+
+package() {
+  # Add pacman configuration file
+  # The file will be included in /etc/pacman.conf via the Include command
+  install -Dm0644 "$srcdir/options.conf" "$pkgdir/etc/pacman.d/options.conf"
+
+}
+sha256sums=('78b7c81385ec3802bf5247b2eeb6cbca9cf25133deb1f7e07000ba18e7b2dcdc')

@@ -12,3 +12,4 @@ source=(wheel)
 package() {
   install -Dm0644 "$srcdir/wheel" "$pkgdir/etc/sudoers.d/wheel"
 }
+sha256sums=('9db7f67e68218e51ee549cba0949aae86b6c14a48ac40b851cf76aba951f70a7')
