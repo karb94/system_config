@@ -19,6 +19,7 @@ depends=(
   paccache-hooks
   pipewire
   shell-meta
+  stow
   sudo-conf
   system_config-conf
   ungoogled-chromium-conf
