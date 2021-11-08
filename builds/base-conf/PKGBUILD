@@ -25,6 +25,7 @@ depends=(
   ungoogled-chromium-conf
   utils-meta
   xorg-meta
+  otf-nerd-fonts-fira-code
 )
 
 package() {
