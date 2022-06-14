@@ -20,9 +20,7 @@ depends=(
   pipewire
   shell-meta
   stow
-  sudo-conf
   system_config-conf
-  ungoogled-chromium-conf
   utils-meta
   xorg-meta
   otf-nerd-fonts-fira-code
