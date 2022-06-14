@@ -8,6 +8,7 @@ arch=(any)
 license=(GPL)
 source=(options.conf)
 depends=(include-pacman-conf)
+install=makepkg-conf.install
 
 package() {
   # Add pacman configuration file
