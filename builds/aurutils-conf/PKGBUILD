@@ -12,7 +12,7 @@ depends=(git aurutils)
 
 package() {
   # Add aurutils environment variables to /etc/profile.d/
-  install -Dm0644 "$srcdir/aur.sh" "$pkgdir/etc/profile.d/aur.sh"
+  install -vDm0644 "$srcdir/aur.sh" "$pkgdir/etc/profile.d/aur.sh"
 
   install -vDm0644 \
     "$srcdir/aurutils.conf" \
@@ -23,6 +23,7 @@ package() {
     "$srcdir/pacman-aur.conf" \
     "$pkgdir/etc/aurutils/pacman-aur.conf"
 }
-sha256sums=('5420f6746c1d291ecdb383e5bc4c4c67321c3546cb455038d39d812416a87d50'
+
+sha256sums=('e02ee1928fa327eded543394094595c0952659645892b8656e0496f370b4f09c'
             '2276873a0daa1436b8c01471c4a00fa400cd1ae4685fb78fb707201d720caf2e'
             'a7ae338e1ec825a439da583d2b0f78ffd18744fac264fdece2d64b98da6a1c8a')
