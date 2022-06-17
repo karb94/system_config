@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc="Install AUR related packages"
 arch=(any)
 license=(GPL)
-depends=(aur-conf devtools aurutils-conf)
+depends=(devtools aurutils-conf)
 
 package() {
   :

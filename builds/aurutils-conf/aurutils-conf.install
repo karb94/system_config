@@ -1,19 +1,21 @@
 post_install() {
   # Clone AUR local repositor
-  # git clone https://gitlab.com/karb94/aur.git "$pkgdir/var/cache/pacman/"
+  git clone https://gitlab.com/karb94/aur.git "$pkgdir/var/cache/pacman/"
 
   # Grant read/write access of the whole directory to the "wheel" group
-  # chgrp -Rh "wheel" "$pkgdir/var/cache/pacman/aur"
-  # chmod -R 774 "$pkgdir/var/cache/pacman/aur"
+  chgrp -Rh "wheel" "$pkgdir/var/cache/pacman/aur"
+  chmod -R 774 "$pkgdir/var/cache/pacman/aur"
 
   # Clone AUR local repositor
-  cd "$pkgdir/var/cache/pacman/pkg"
-  git init
-  git remote add origin git@gitlab.com:karb94/aur.git
+  # cd "$pkgdir/var/cache/pacman/pkg"
+  # git init
+  # git remote add origin git@gitlab.com:karb94/aur.git
+  # ln -s aur.db aur.db.tar.gz
+  # ln -s aur.files aur.files.tar.gz
 
-  # Grant read/write access of the whole directory to the "wheel" group
-  chgrp -Rh "wheel" "$pkgdir/var/cache/pacman/pkg"
-  chmod -R 774 "$pkgdir/var/cache/pacman/pkg"
+  # # Grant read/write access of the whole directory to the "wheel" group
+  # chgrp -Rh "wheel" "$pkgdir/var/cache/pacman/pkg"
+  # chmod -R 775 "$pkgdir/var/cache/pacman/pkg"
 }
 
 post_remove() {
