@@ -6,24 +6,20 @@ pkgrel=1
 pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
 arch=(any)
 license=(GPL)
-source=(aurutils.sh aurutils.conf pacman-aur.conf)
+source=(aurutils.sh pacman-aur.conf)
 install=aurutils-conf.install
 depends=(git aurutils aur-conf)
 
 package() {
   # Add aurutils environment variables to /etc/profile.d/
-  install -vDm0644 "$srcdir/aurutils.sh" "$pkgdir/etc/profile.d/aur.sh"
+  install -vDm0644 "$srcdir/aurutils.sh" "$pkgdir/etc/profile.d/aurutils.sh"
 
-  install -vDm0644 \
-    "$srcdir/aurutils.conf" \
-    "$pkgdir/etc/pacman.d/aurutils.conf"
-
-  # aurutils uses an independent pacman.conf for its builds
+  # aurutils uses an independent pacman.conf for its builds (see man aur build)
+  # The name and directory are important
   install -vDm0644 \
     "$srcdir/pacman-aur.conf" \
     "$pkgdir/etc/aurutils/pacman-aur.conf"
 }
 
-sha256sums=('e02ee1928fa327eded543394094595c0952659645892b8656e0496f370b4f09c'
-            '2276873a0daa1436b8c01471c4a00fa400cd1ae4685fb78fb707201d720caf2e'
+sha256sums=('5c7a5f173c155e8e1368f6be1e981ea52e6b8237d4ce96662e12eca04fb66f1a'
             'a7ae338e1ec825a439da583d2b0f78ffd18744fac264fdece2d64b98da6a1c8a')

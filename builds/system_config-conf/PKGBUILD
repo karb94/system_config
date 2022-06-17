@@ -14,4 +14,4 @@ package() {
     "$srcdir"/system_config.conf \
     "$pkgdir"/etc/pacman.d/system_config.conf
 }
-sha256sums=('95146ede4c79be4743a0e980cb571a6c207a5e7ac0074e63a5e39ddcb96df667')
+sha256sums=('30165df1c11e051ee5ce1b1462263ce171620728206e1d4f16a4b826c7a9cd9c')

@@ -16,4 +16,4 @@ package() {
   install -Dm0644 "$srcdir/options.conf" "$pkgdir/etc/pacman.d/options.conf"
 
 }
-sha256sums=('78b7c81385ec3802bf5247b2eeb6cbca9cf25133deb1f7e07000ba18e7b2dcdc')
+sha256sums=('7fa47aa704fce72f6d300514c1750b074764e3d0606f95076186adaf06160f5a')
