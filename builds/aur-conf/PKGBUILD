@@ -14,4 +14,4 @@ package() {
   # The file will be included in /etc/pacman.conf via the Include command
   install -Dm0644 "$srcdir/aur.conf" "$pkgdir/etc/pacman.d/aur.conf"
 }
-sha256sums=('8150e5f3ddd1b11f5fa6a5e9f3000097faa5b3c70b0c17b7fb7b5d5ef14be4dc')
+sha256sums=('aaafb84adddc27e11d77f8a7aa9e9b827859d30d12f7a24482dd978b9834255c')
