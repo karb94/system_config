@@ -7,7 +7,7 @@ pkgdesc="Install pacman configuration (pacman.conf) for Arch User Repository"
 arch=(any)
 license=(GPL)
 source=(aur.conf)
-depends=(include-pacman-conf)
+depends=(include-pacman-conf locale-conf)
 
 package() {
   # Add pacman configuration file
