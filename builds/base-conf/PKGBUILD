@@ -12,7 +12,7 @@ depends=(
   doas-conf
   env-vars
   linux-firmware 
-  linux-zen
+  linux
   locale-conf
   neovim-meta
   network-meta
