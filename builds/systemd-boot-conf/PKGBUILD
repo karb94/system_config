@@ -8,7 +8,7 @@ arch=(any)
 license=(GPL)
 source=(loader.conf arch.conf 100-systemd-boot.hook)
 install=systemd-boot-conf.install
-depends=(linux-zen)
+depends=(linux)
 
 package() {
   # Loader configuration
@@ -16,7 +16,7 @@ package() {
     "$srcdir"/loader.conf \
     "$pkgdir"/usr/lib/systemd-boot-conf/loader.conf
 
-  # Arch linux-zen kernel configuration
+  # linux kernel configuration
   install -Dm0644 \
     "$srcdir"/arch.conf \
     "$pkgdir"/usr/lib/systemd-boot-conf/arch.conf
@@ -26,5 +26,5 @@ package() {
     "$pkgdir"/etc/pacman.d/hooks/100-systemd-boot.hook
 }
 sha256sums=('90524274ded0372a363d9f469c31da282171a92a7a4e5ca7a2a58c756e0bd850'
-            'd573a80e6f4fc011b0341bd586fd90bbd49ec846376fe191007b1ca18704bbd0'
+            '7d9028922633048b9c2c4e5df45439838cd8aff37dd9ed2329242fc519c2f610'
             'a913749be960f1c2230ff7f07d716b7dc602cf28b835af0511b9089a757abc27')

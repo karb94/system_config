@@ -13,6 +13,8 @@ depends=(
   env-vars
   linux-firmware 
   linux
+  base
+  base-devel
   locale-conf
   neovim-meta
   network-meta
