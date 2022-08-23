@@ -19,4 +19,4 @@ package() {
     "$srcdir"/dns.conf \
     "$pkgdir"/etc/NetworkManager/conf.d/dns.conf
 }
-sha256sums=('e157ff3707ff897f4c79ff05f707350bf573624805fc739d3eda758cca94b77d')
+sha256sums=('80ee32ae2b4038691ef64248f5794e7d59cc34e626e181482af8037a0e338c04')
