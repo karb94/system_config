@@ -9,7 +9,6 @@ license=(GPL)
 source=(xinitrc)
 install=xorg-meta.install
 depends=(
-  alacritty
   bspwm
   hsetroot
   picom

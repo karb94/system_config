@@ -22,7 +22,6 @@ depends=(
   stow
   system_config-conf
   utils-meta
-  xorg-meta
   otf-nerd-fonts-fira-code
 )
 
