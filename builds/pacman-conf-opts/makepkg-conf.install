@@ -1,0 +1,3 @@
+post_install() {
+  sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
+}
