@@ -10,7 +10,6 @@ source=(hostname hosts)
 install=network-meta.install
 depends=(
   networkmanager-meta
-  dnscrypt-proxy-conf
 )
 
 package() {
