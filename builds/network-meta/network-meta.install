@@ -1,4 +1,6 @@
 post_install() {
   # Install hosts file here because the package "filesystem" creates the file
   cp -vf /usr/lib/network-meta/hosts /etc/hosts
+  # enable systemd-resolved daemon service
+  systemctl enable --now systemd-resolved.service
 }
