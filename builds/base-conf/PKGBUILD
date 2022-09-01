@@ -11,18 +11,19 @@ depends=(
   build-meta
   doas-conf
   env-vars
-  linux-firmware 
   linux
+  linux-firmware 
   locale-conf
   neovim-meta
   network-meta
+  otf-nerd-fonts-fira-code
   paccache-hooks
   pipewire
+  river-conf
   shell-meta
   stow
   system_config-conf
   utils-meta
-  otf-nerd-fonts-fira-code
 )
 
 package() {
