@@ -21,5 +21,5 @@ package() {
     "$pkgdir/etc/aurutils/pacman-aur.conf"
 }
 
-sha256sums=('5c7a5f173c155e8e1368f6be1e981ea52e6b8237d4ce96662e12eca04fb66f1a'
+sha256sums=('11c01ba4b2ddf2e6096aea7697c482269a3cbd1a8150fd529329bfe0b222d8a0'
             'a7ae338e1ec825a439da583d2b0f78ffd18744fac264fdece2d64b98da6a1c8a')

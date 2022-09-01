@@ -1,4 +1,4 @@
-# post_install() {
+post_install() {
   # Clone AUR local repositor
   # git clone https://gitlab.com/karb94/aur.git "$pkgdir/var/cache/pacman/"
 
@@ -16,7 +16,8 @@
   # # Grant read/write access of the whole directory to the "wheel" group
   # chgrp -Rh "wheel" "$pkgdir/var/cache/pacman/pkg"
   # chmod -R 775 "$pkgdir/var/cache/pacman/pkg"
-# }
+  aur chroot --create
+}
 
 post_remove() {
   rm -vrf /etc/aurutils
