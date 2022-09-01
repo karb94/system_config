@@ -1,0 +1,14 @@
+# Maintainer: Carles Rafols i Belles
+
+pkgname=river-conf
+pkgver=1
+pkgrel=1
+pkgdesc="Install River configuration"
+arch=(any)
+license=(GPL)
+install=river-conf.install
+depends=(river)
+
+package() {
+  :
+}
